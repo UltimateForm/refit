@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+#if NETSTANDARD1_4
 using System.Web;
+#else
+using Mono.Web;
+#endif
 using System.Collections.Concurrent;
 using System.Net.Http.Headers;
 
